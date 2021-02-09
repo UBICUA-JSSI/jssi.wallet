@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'ubicua.jssi'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+final FASTERXML_VERSION = '2.12.0'
+final BITCOINJ_VERSION = '0.15.3'
+final SQLITE_VERSION = '3.28.0'
+final ORMLITE_VERSION = '5.1'
+final MSGPACK_VERSION = '0.8.17'
+final REACTIVEX_VERSION = '2.2.11'
+
+dependencies {
+
+    implementation project(':sodium')
+    implementation "org.xerial:sqlite-jdbc:$SQLITE_VERSION"
+    implementation "com.j256.ormlite:ormlite-core:$ORMLITE_VERSION"
+    implementation "com.j256.ormlite:ormlite-jdbc:$ORMLITE_VERSION"
+    implementation "org.msgpack:msgpack-core:$MSGPACK_VERSION"
+    implementation 'org.json:json:20180813'
+    implementation "io.reactivex.rxjava2:rxjava:$REACTIVEX_VERSION"
+    implementation "org.bitcoinj:bitcoinj-core:$BITCOINJ_VERSION"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$FASTERXML_VERSION"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:$FASTERXML_VERSION"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}

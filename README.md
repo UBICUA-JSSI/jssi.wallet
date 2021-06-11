@@ -12,7 +12,7 @@ Due to security reasons, the API is conveniently divided in two parts:
 - Open JDK 15+
 
 ## Dependencies
-- org.libsodium (a jni wrapper over libsodium)
+- org.libsodium is a jni wrapper over [libsodium](https://github.com/jedisct1/libsodium)
 
 ## Configuration
 The configuration directory of sqlite wallet is specified in the WALLET_DIR parameter of the jssi.wallet.WalletConstants class. The <user_dir>/.indy_client/wallet/ubicua_wallet/ value is set as default. However, the configuration may vary depending on the application requirements.
